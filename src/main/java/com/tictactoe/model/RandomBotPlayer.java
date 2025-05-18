@@ -1,5 +1,6 @@
 package com.tictactoe.model;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -11,6 +12,7 @@ public class RandomBotPlayer implements PlayerInterface {
 private final Symbol symbol;
 private final String name;
 private final Random random = new Random();
+private LocalTime timeFrom;
 
 public RandomBotPlayer(String name, Symbol symbol) {
     this.name = name;
@@ -31,5 +33,11 @@ public Move getMove(Board board) {
     }
     System.out.println(emptyCells.size()+"This is empty size ");
     return emptyCells.get(random.nextInt(emptyCells.size()));
+}
+
+@Override
+public LocalTime getTimeFrom() {
+	timeFrom = LocalTime.now();
+	return timeFrom;
 }
 }

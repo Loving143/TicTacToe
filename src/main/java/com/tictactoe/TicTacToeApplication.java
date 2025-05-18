@@ -1,5 +1,7 @@
 package com.tictactoe;
 
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,23 +19,8 @@ import com.tictactoe.service.PlayerInterface;
 public class TicTacToeApplication {
 
 	public static void main(String[] args) {
-		//Scanner sc = new Scanner(System.in);
-//		System.out.println("Please enter the Board size");
-//		int boardSize = sc.nextInt();
-//		System.out.println("Please enter first player name");
-//		String playerName1 = sc.next();
-//		System.out.println("Please enter second player name");
-//		String playerName2 = sc.next();
-//		System.out.println("Chose the Sysmbol from the list");
-//		System.out.println("     X     ");
-//		System.out.println("    O   ");
-//		System.out.println("Player one enter symbol");
-//		char symbol1 = sc.next().charAt(0);
-//		System.out.println("Player two enter symbol");
-//		char symbol2 = sc.next().charAt(0);
 		
-		
-		 Scanner sc = new Scanner(System.in);
+			Scanner sc = new Scanner(System.in);
 
 	        System.out.println("Enter board size (e.g., 3 for 3x3): ");
 	        int size = sc.nextInt();
@@ -44,7 +31,7 @@ public class TicTacToeApplication {
 
 	        PlayerInterface player1, player2;
 
-	        if (choice == 1) {
+	        if(choice == 1) {
 	            System.out.println("Enter Player 1 name:");
 	            player1 = new HumanPlayer(sc.next(), Symbol.X);
 	            System.out.println("Enter Player 2 name:");
@@ -63,8 +50,15 @@ public class TicTacToeApplication {
 	      while(!board.isFull()) {
 	    	  board.printBoard();
 	    	  Move move = currentPlayer.getMove(board);
-	    	
 	    	Command move2 = new MoveCommand(board, move.getRow(),move.getCol(),currentPlayer );
+	    	LocalTime timeUpto = LocalTime.now();
+	    	Duration duration = Duration.between(currentPlayer.getTimeFrom(), timeUpto);
+	    	if(duration.getSeconds()>15) {
+	    		System.out.println("Your time is up");
+	    		currentPlayer = (currentPlayer == player1) ? player2 : player1;
+	    		System.out.println(currentPlayer.getName()+" is the winner !!");
+	    		return;
+	    	}
 	    	if(!controller.executeCommand(move2)) {
 	    		System.out.println("Invalid move. Try again.");
                 continue;
