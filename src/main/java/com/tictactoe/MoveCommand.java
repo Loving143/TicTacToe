@@ -1,10 +1,10 @@
 // === MoveCommand.java ===
-package com.parkinglot;
+package com.tictactoe;
 
-import com.parkinglot.model.Board;
-import com.parkinglot.model.Player;
-import com.parkinglot.service.Command;
-import com.parkinglot.service.PlayerInterface;
+import com.tictactoe.model.Board;
+import com.tictactoe.model.Player;
+import com.tictactoe.service.Command;
+import com.tictactoe.service.PlayerInterface;
 
 public class MoveCommand implements Command {
     private final Board board;

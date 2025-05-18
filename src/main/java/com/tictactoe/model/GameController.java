@@ -1,9 +1,9 @@
-package com.parkinglot.model;
+package com.tictactoe.model;
 
 import java.util.List;
 import java.util.Stack;
 
-import com.parkinglot.service.Command;
+import com.tictactoe.service.Command;
 
 public class GameController {
 	List<Player>playerList;

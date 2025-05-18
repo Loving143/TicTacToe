@@ -1,10 +1,10 @@
 // === Player.java ===
-package com.parkinglot.model;
+package com.tictactoe.model;
 
 import java.util.Scanner;
 
-import com.parkinglot.MoveCommand;
-import com.parkinglot.enumm.Symbol;
+import com.tictactoe.MoveCommand;
+import com.tictactoe.enumm.Symbol;
 
 public class Player {
     private final String name;

@@ -1,17 +1,17 @@
-package com.parkinglot;
+package com.tictactoe;
 
 import java.util.Scanner;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.parkinglot.enumm.Symbol;
-import com.parkinglot.model.Board;
-import com.parkinglot.model.GameController;
-import com.parkinglot.model.HumanPlayer;
-import com.parkinglot.model.Move;
-import com.parkinglot.model.RandomBotPlayer;
-import com.parkinglot.service.Command;
-import com.parkinglot.service.PlayerInterface;
+import com.tictactoe.enumm.Symbol;
+import com.tictactoe.model.Board;
+import com.tictactoe.model.GameController;
+import com.tictactoe.model.HumanPlayer;
+import com.tictactoe.model.Move;
+import com.tictactoe.model.RandomBotPlayer;
+import com.tictactoe.service.Command;
+import com.tictactoe.service.PlayerInterface;
 
 @SpringBootApplication
 public class TicTacToeApplication {

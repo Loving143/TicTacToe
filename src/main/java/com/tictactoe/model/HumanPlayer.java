@@ -1,9 +1,9 @@
-package com.parkinglot.model;
+package com.tictactoe.model;
 
 import java.util.Scanner;
 
-import com.parkinglot.enumm.Symbol;
-import com.parkinglot.service.PlayerInterface;
+import com.tictactoe.enumm.Symbol;
+import com.tictactoe.service.PlayerInterface;
 
 public class HumanPlayer implements PlayerInterface
 {

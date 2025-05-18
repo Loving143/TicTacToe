@@ -1,11 +1,11 @@
-package com.parkinglot.model;
+package com.tictactoe.model;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.parkinglot.enumm.Symbol;
-import com.parkinglot.service.PlayerInterface;
+import com.tictactoe.enumm.Symbol;
+import com.tictactoe.service.PlayerInterface;
 
 public class RandomBotPlayer implements PlayerInterface {
 private final Symbol symbol;

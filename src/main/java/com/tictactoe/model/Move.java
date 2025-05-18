@@ -1,4 +1,4 @@
-package com.parkinglot.model;
+package com.tictactoe.model;
 
 public class Move {
 	

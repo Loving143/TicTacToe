@@ -1,6 +1,6 @@
-package com.parkinglot.model;
+package com.tictactoe.model;
 
-import com.parkinglot.enumm.Symbol;
+import com.tictactoe.enumm.Symbol;
 
 public class Cell {
     private int row, col;
